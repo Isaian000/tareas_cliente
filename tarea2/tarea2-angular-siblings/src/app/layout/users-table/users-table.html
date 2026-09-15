@@ -1,0 +1,9 @@
+<h1>Users</h1>
+<ul>
+    @for (usuario of users; track usuario.username){
+        <li
+            [class.selected]="usuario.username === seleccionado?.username"
+            (click)="onSelect(usuario)"
+        >{{usuario.name}} {{usuario.username}}</li>
+    }
+</ul>

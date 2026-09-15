@@ -1,0 +1,29 @@
+.user-detail {
+    font-family: Arial, Helvetica, sans-serif;
+
+    h1 {
+        color: black;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 12px 0;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+
+    .empty {
+        color: #777;
+        font-style: italic;
+    }
+
+    button {
+        padding: 6px 14px;
+        cursor: pointer;
+    }
+}

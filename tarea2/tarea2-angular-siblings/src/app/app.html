@@ -1,16 +1,10 @@
 <app-header></app-header>
 
 <main>
-  <app-users-table
-    [users]="usuarios"
-    [seleccionado]="seleccionado()"
-    (seleccionar)="seleccionar($event)"
+  <app-users-table [users]="usuarios" [seleccionado]="seleccionado()" (seleccionar)="seleccionar($event)"
   ></app-users-table>
 
-  <app-user-detail
-    [seleccionado]="seleccionado()"
-    (limpiar)="limpiar()"
-  ></app-user-detail>
+  <app-user-detail [seleccionado]="seleccionado()" (limpiar)="limpiar()"></app-user-detail>
 </main>
 
 

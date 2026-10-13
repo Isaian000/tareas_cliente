@@ -1,0 +1,20 @@
+<article class="card">
+  <a class="poster" [routerLink]="['/movies', movie.id]">
+    <img [src]="movie.poster" [alt]="'Poster de ' + movie.title" loading="lazy" />
+  </a>
+  <div class="body">
+    <h2>
+      <a [routerLink]="['/movies', movie.id]">{{ movie.title }}</a>
+    </h2>
+    <p class="meta">{{ movie.director }} · {{ movie.year }}</p>
+    <span class="genre">{{ movie.genre }}</span>
+    <button
+      type="button"
+      class="button"
+      [ngClass]="{ active: favorite }"
+      (click)="favoriteToggle.emit(movie)"
+    >
+      {{ favorite ? 'Quitar de favoritos' : 'Agregar a favoritos' }}
+    </button>
+  </div>
+</article>

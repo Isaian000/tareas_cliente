@@ -1,0 +1,49 @@
+<section class="page">
+  <a class="back" routerLink="/">Volver a la lista</a>
+
+  <article class="detail" *ngIf="movie; else notFound">
+    <img class="poster" [src]="movie.poster" [alt]="'Poster de ' + movie.title" />
+
+    <div class="info">
+      <h1>{{ movie.title }}</h1>
+      <p class="description">{{ movie.description }}</p>
+
+      <dl>
+        <div>
+          <dt>Director</dt>
+          <dd>{{ movie.director }}</dd>
+        </div>
+        <div>
+          <dt>Productor</dt>
+          <dd>{{ movie.producer }}</dd>
+        </div>
+        <div>
+          <dt>Género</dt>
+          <dd>{{ movie.genre }}</dd>
+        </div>
+        <div>
+          <dt>Año</dt>
+          <dd>{{ movie.year }}</dd>
+        </div>
+      </dl>
+
+      <div class="actions">
+        <button
+          type="button"
+          class="button"
+          [ngClass]="{ active: favoritesService.isFavorite(movie.id) }"
+          (click)="onFavoriteToggle(movie)"
+        >
+          {{
+            favoritesService.isFavorite(movie.id) ? 'Quitar de favoritos' : 'Agregar a favoritos'
+          }}
+        </button>
+        <a class="button" routerLink="/favorites">Ver mis favoritos</a>
+      </div>
+    </div>
+  </article>
+
+  <ng-template #notFound>
+    <p class="empty">La película que buscas no existe.</p>
+  </ng-template>
+</section>

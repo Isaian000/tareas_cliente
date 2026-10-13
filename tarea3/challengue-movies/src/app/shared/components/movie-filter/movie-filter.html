@@ -1,0 +1,26 @@
+<form class="filters" [formGroup]="form">
+  <label>
+    Título
+    <input type="text" formControlName="title" placeholder="Buscar por título" />
+  </label>
+  <label>
+    Director
+    <input type="text" formControlName="director" placeholder="Buscar por director" />
+  </label>
+  <label>
+    Productor
+    <input type="text" formControlName="producer" placeholder="Buscar por productor" />
+  </label>
+  <label>
+    Género
+    <select formControlName="genre">
+      <option value="">Todos</option>
+      <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+    </select>
+  </label>
+  <label>
+    Año
+    <input type="number" formControlName="year" placeholder="Ej. 1994" />
+  </label>
+  <button type="button" class="button" (click)="clear()">Limpiar</button>
+</form>

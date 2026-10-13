@@ -1,0 +1,22 @@
+<section class="page">
+  <header class="page-header">
+    <h1>Mis favoritos</h1>
+    <p>{{ movies().length }} películas</p>
+  </header>
+
+  <div class="grid" *ngIf="movies().length; else empty">
+    <app-movie-card
+      *ngFor="let movie of movies()"
+      [movie]="movie"
+      [favorite]="true"
+      (favoriteToggle)="onFavoriteToggle($event)"
+    />
+  </div>
+
+  <ng-template #empty>
+    <p class="empty">
+      Todavía no tienes películas favoritas.
+      <a routerLink="/">Explorar películas</a>
+    </p>
+  </ng-template>
+</section>

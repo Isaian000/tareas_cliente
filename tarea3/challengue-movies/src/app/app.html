@@ -1,0 +1,15 @@
+<header class="navbar">
+  <a class="brand" routerLink="/">Challengue Movies</a>
+  <nav>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Películas
+    </a>
+    <a routerLink="/favorites" routerLinkActive="active">
+      Favoritos ({{ favorites().length }})
+    </a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>

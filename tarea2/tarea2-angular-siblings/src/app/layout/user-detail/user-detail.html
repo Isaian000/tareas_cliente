@@ -1,0 +1,16 @@
+<div class="user-detail">
+  <h1>Detalle</h1>
+
+  @if (seleccionado) {
+    <ul>
+      <li><strong>Nombre:</strong> {{ seleccionado.name }}</li>
+      <li><strong>Usuario:</strong> {{ seleccionado.username }}</li>
+      <li><strong>Email:</strong> {{ seleccionado.email }}</li>
+      <li><strong>Teléfono:</strong> {{ seleccionado.phone }}</li>
+      <li><strong>Sitio web:</strong> {{ seleccionado.website }}</li>
+    </ul>
+    <button (click)="onLimpiar()">Limpiar</button>
+  } @else {
+    <p class="empty">No hay ningún usuario seleccionado</p>
+  }
+</div>

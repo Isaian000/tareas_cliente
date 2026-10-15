@@ -1,0 +1,35 @@
+:root {
+  --color-primary: #4338ca;
+  --color-primary-dark: #1e1b4b;
+  --color-primary-light: #e0e7ff;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f9fafb;
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --font-main: 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
+  color: var(--color-primary-dark);
+}
+
+section {
+  scroll-margin-top: 60px; /* para que el scroll a anclas no quede tapado */
+}
+
+a {
+  color: var(--color-primary);
+}
